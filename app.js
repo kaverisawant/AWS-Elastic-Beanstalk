@@ -42,5 +42,5 @@ connection.connect(function(err) {
     console.error('Database connection failed: ' + err.stack);
     return;
   }
-  console.log('Database connected..')
+  console.log('Database connected.')
 });
