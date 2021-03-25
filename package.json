@@ -1,13 +1,14 @@
 {
   "name": "my-app",
   "version": "0.0.1",
-  "private": true,
   "dependencies": {
-    "ejs": "latest",
     "aws-sdk": "latest",
-    "express": "latest",
     "body-parser": "latest",
-    "mysql": "latest"
+    "ejs": "latest",
+    "express": "^4.17.1",
+    "mysql": "latest",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.0.0"
   },
   "scripts": {
     "start": "node app.js"
