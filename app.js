@@ -1,11 +1,12 @@
 const express = require('express')
+var mysql = require('mysql');
+// 
 const app = express();
 let PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"))
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
-var mysql = require('mysql');
 let isDbConnected =false;
 var connection = mysql.createConnection({
   host     : process.env.RDS_HOSTNAME,
