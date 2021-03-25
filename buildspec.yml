@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+     - echo "install phase started"
+     - npm install
+     - echo "install phase ended"
+  pre_build: 
+    commands:
+     - echo "pre_build aka test phase started"
+     - echo "mocha unit test"
+     - npm test
+     - echo "mocha unit test ended"
+  build:
+    commands:
+     - echo "build phase started"
+     - echo "build complete"
