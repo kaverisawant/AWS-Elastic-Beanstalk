@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCLab</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</head>
+<body>
+
+    <input id="data" type="text">
+    <button onclick=senddata()>Submit</button>
+    <div class="cont_principal">
+      <div class="cont_centrar">
+      
+        <div class="cont_todo_list_top">
+        <div class="cont_titulo_cont">
+          <h3>THINGS TO DO</h3>
+          </div>
+      <div class="cont_add_titulo_cont"><a href="#e" onclick="add_new()"><i class="material-icons">&#xE145;</i></a>
+          </div>
+       
+      <!--   End cont_todo_list_top  -->  </div>
+      <div class="cont_crear_new">
+        <table class="table">
+      <tr>
+        <th>Action</th>
+        <th>Title</th>
+       <th>Date</th>
+          </tr>
+          <tr>
+          <td><select name="" id="action_select">
+       <option value="SHOPPING">SHOPPING</option>
+       <option value="WORK">WORK</option> <option value="SPORT">SPORT</option> <option value="MUSIC">MUSIC</option> 
+            </select>
+      <!-- End td 1 -->
+            </td>
+             <td>
+      <input type="text" class="input_title_desc" />      
+      
+               <!-- End td 2 -->
+            </td>
+          <td>
+      <select name="" class="input_description_title"  id="date_select">
+       <option value="TODAY">TODAY</option>
+       <option value="TOMORROW">TOMORROW</option>       </select>
+      
+            <!-- End td 3 -->
+            </td>
+          </tr>
+      <tr>
+         <th class="titl_description" >Description</th>
+          </tr>
+      <tr>
+      
+        <td colspan="3">
+        <input type="text" class="input_description" required />
+        </td>
+          </tr>
+          <tr>
+          <td colspan="3">
+        <button class="btn_add_fin"  onclick="add_to_list()">ADD</button>
+        </td>
+          </tr>
+        </table>
+        <!--   End cont_crear_new  --> 
+        </div>
+        
+        
+      <div class="cont_princ_lists">
+      <ul>
+        
+      <!-- <li class="list_work"></li>
+        <li class="list_sport"></li>
+        <li class="list_music"></li>
+       -->  </ul>
+      <!--   End cont_todo_list_top  -->   
+    </div>
+        
+        
+        <!--   End cont_central  -->
+        </div>
+      </div>
+
+    <script>
+
+      function  senddata(){
+            let name  = $('#data').val();
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", `${window.location.origin}`+'/data', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify({
+                value: name
+            }));
+            
+      }
+    </script>
+    
+</body>
+</html>
