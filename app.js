@@ -7,6 +7,7 @@ app.use(express.static("public"))
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
 var mysql = require('mysql');
 let isDbConnected =false;
+// abcd
 var connection = mysql.createConnection({
   host     : process.env.RDS_HOSTNAME,
   user     : process.env.RDS_USERNAME,
