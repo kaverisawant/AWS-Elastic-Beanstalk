@@ -16,6 +16,7 @@ var connection = mysql.createConnection({
   database : process.env.RDS_DB_NAME,
 });
 
+// djdjd
 
 app.post('/data',(req, res)=>{
     console.log(req.body)
