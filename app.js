@@ -9,11 +9,11 @@ app.use(express.static("public"))
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
 let isDbConnected =false;
 var connection = mysql.createConnection({
-  host     : process.env.RDS_HOSTNAME,
-  user     : process.env.RDS_USERNAME,
-  password : process.env.RDS_PASSWORD,
-  port     : process.env.RDS_PORT,
-  database : process.env.RDS_DB_NAME,
+  host     : "cloud-computing.c4mjjsqr0bqs.us-east-2.rds.amazonaws.com",
+  user     : "admin",
+  password : "REDcherry",
+  port     :3306,
+  database : "cloudcc",
 });
 
 // djdjd
