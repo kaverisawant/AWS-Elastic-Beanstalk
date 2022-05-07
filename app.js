@@ -13,7 +13,7 @@ var connection = mysql.createConnection({
   user     : "admin",
   password : "REDcherry",
   port     :3306,
-  database : "cloudcc",
+  database : "cloudcc2",
 });
 
 // djdjd
